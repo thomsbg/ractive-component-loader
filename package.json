@@ -1,0 +1,34 @@
+{
+  "name": "ractive-component-loader",
+  "version": "1.0.0",
+  "description": "ractive component loader module for webpack",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomsbg/ractive-component-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "ractive",
+    "build"
+  ],
+  "author": "Blake Thomson <thomsbg+npm@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "peerDependencies": {
+    "ractive": "~0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "ractive": "~0"
+  },
+  "dependencies": {
+    "clean-css": "^3.0.7",
+    "rcu": "^0.3.0",
+    "tosource": "^0.1.3"
+  }
+}
