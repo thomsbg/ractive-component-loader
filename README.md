@@ -72,4 +72,4 @@ Authored and maintained by Blake Thomson with help from contributors ([list][con
 [Ractive component]: https://github.com/ractivejs/component-spec
 [webpack]: http://webpack.github.io/
 [MIT]: http://mit-license.org/
-[contributors]: http://github.com/rstacruz/ractive-loader/contributors
+[contributors]: http://github.com/thomsbg/ractive-component-loader/contributors
