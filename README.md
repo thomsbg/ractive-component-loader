@@ -34,7 +34,7 @@ Then use your Ractive components via `require()`:
 
 ```html
 <!-- mycomponent.html -->
-<import rel="ractive" href="./subcomponent.html">
+<link rel="ractive" href="./subcomponent.html">
 
 <div>Hello {{subject}}!</div>
 <subcomponent></subcomponent>
