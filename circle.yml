@@ -1,0 +1,49 @@
+general:
+  artifacts:
+    - "coverage"
+    - "mochawesome-unit-reports"
+machine:
+  node:
+    version: 4.3.2
+dependencies:
+  pre:
+    - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
+    - npm install -g npm
+    - npm install -g mocha
+    - npm install -g jshint
+    - npm install -g istanbul
+  post:
+    - npm update
+test:
+  override:
+    - npm run jshint
+    - npm run unit:
+        environment:
+          MOCHA_FILE: ./unit-results.xml
+          MOCHAWESOME_REPORTDIR: mochawesome-unit-reports
+          MOCHAWESOME_INLINEASSETS: true
+    - npm run coverage
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - cp ./unit-results.xml $CIRCLE_TEST_REPORTS/junit/
+deployment:
+  develop:
+    branch: develop
+    commands:
+      - git config user.email pyramid.ci@theberrycompany.com
+      - git config user.name pyramid-ci
+      - git fetch
+      - git checkout master
+      - git pull
+      - git merge --no-edit develop
+      - git push
+      - git checkout develop
+  master:
+    branch: master
+    commands:
+      - git config user.email pyramid.ci@theberrycompany.com
+      - git config user.name pyramid-ci
+      - git tag v$PACKAGE_VERSION -a -m "circle ci release v$PACKAGE_VERSION":
+          environment:
+            PACKAGE_VERSION: "$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')"
+      - git push --follow-tags
+      - npm publish
