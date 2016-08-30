@@ -8,13 +8,14 @@ rcu.init(Ractive);
 
 module.exports = function (source) {
 	this.cacheable();
-
-	var isPartial = /\/_.*\.ract/.test(this.request)
+	var fileName =  this.request ? this.request.replace(/^.*[\\\/]/, '') : ''
+	var isPartial = fileName.startsWith('_')
 
 	var definition = rcu.parse(source);
 
 	var templateSource = toSource(definition.template, null, '')
 	if (isPartial) {
+
 		return 'module.exports = ' + templateSource + ';\n'
 	}
 	return '' +
