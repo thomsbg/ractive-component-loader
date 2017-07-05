@@ -589,9 +589,9 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
-ractive@0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/ractive/-/ractive-0.9.1.tgz#442bdca493a1ec809aefc5a5e1e45e972055a9e7"
+ractive@0.9.2:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/ractive/-/ractive-0.9.2.tgz#2913106cfbb31c12d4656c341f6ce43058f1e206"
 
 rcu@0.9.0:
   version "0.9.0"
