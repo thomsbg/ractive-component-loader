@@ -1,6 +1,6 @@
 {
   "name": "@berrypyramid/ractive-component-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A fork of thomsbg/ractive-component-loader that will load partials from _files the same way the browserify ractive-componentify loader does ",
   "main": "index.js",
   "scripts": {
