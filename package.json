@@ -27,7 +27,7 @@
     "ractive": "0.x"
   },
   "dependencies": {
-    "clean-css": "3.x",
+    "clean-css": "4.x",
     "rcu": "0.x",
     "tosource": "0.x"
   },
