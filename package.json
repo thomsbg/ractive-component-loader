@@ -1,6 +1,6 @@
 {
   "name": "ractive-component-loader",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ractive component loader module for webpack",
   "main": "index.js",
   "repository": {
@@ -30,5 +30,8 @@
     "clean-css": "3.x",
     "rcu": "0.x",
     "tosource": "0.x"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
