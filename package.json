@@ -19,16 +19,16 @@
     "test": "mocha"
   },
   "peerDependencies": {
-    "ractive": "0.x"
+    "ractive": "0.8.1"
   },
   "devDependencies": {
     "chai": "1.x",
     "mocha": "1.x",
-    "ractive": "0.x"
+    "ractive": "0.8.1"
   },
   "dependencies": {
     "clean-css": "3.x",
-    "rcu": "0.x",
+    "rcu": "0.9.0-edge1",
     "tosource": "0.x"
   },
   "publishConfig": {
